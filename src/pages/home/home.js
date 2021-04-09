@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import FormModal from '../../components/form/formModal';
+import UserForm from '../../components/user/userForm.js';
 
-const Home = (props) => (
+const Home = () => (
   <div class="home">
     <Container>
       <Row>
@@ -16,7 +16,7 @@ const Home = (props) => (
       </Row>
       <Row>
         <Col>
-          <FormModal />
+          <UserForm />
         </Col>
       </Row>
     </Container>

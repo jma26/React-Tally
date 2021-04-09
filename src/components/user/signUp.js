@@ -18,7 +18,7 @@ const SignUp = (props) => {
         <Col class="loginbox">
           <h3>Welcome Back</h3>
           <p>To keep connected with us please login with your personal info</p>
-          <Button variant="light" class="sign-in--btn">Sign In</Button>
+          <Button variant="light" class="sign-in--btn" onClick={() => props.toggleLogin(!props.hasAccount)}>Sign In</Button>
         </Col>
         <Col>
           <Form>
