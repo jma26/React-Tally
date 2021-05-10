@@ -12,32 +12,34 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
 
   return (
-    <div class="login">
-      <Row>
-        <Col>
+    <div className="login">
+      <Row xs={1} md={2}>
+        <Col className="p-4 login--col d-flex align-items-center">
           <Form>
-            <h3>Sign in to React Tally!</h3>
+            <h2 className="signup--title mb-4">Login to Your Account</h2>
             <Form.Group controlId="formBasicEmail">
               <Form.Control
                 type="email"
                 placeholder="Email"
                 value={email}
-                onChange={e => setEmail(e.target.value)}/>
+                onChange={e => setEmail(e.target.value)}
+                className="p-3"/>
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
               <Form.Control
                 type="password"
                 placeholder="Password"
                 value={password}
-                onChange={e => setPassword(e.target.value)}/>
+                onChange={e => setPassword(e.target.value)}
+                className="p-3"/>
             </Form.Group>
-            <Button variant="primary" type="submit">Login</Button>
+            <Button type="submit" className="sign-up--btn py-2 px-5 my-4">Login</Button>
           </Form>
         </Col>
-        <Col class="signupbox">
-          <h3>Hello Friend!~</h3>
-          <p>Enter your personal details and tally up your work!</p>
-          <Button variant="light" class="sign-in--btn" onClick={() => props.toggleLogin(!props.hasAccount)}>Sign Up</Button>
+        <Col className="signupbox p-4 d-flex justify-content-center flex-column">
+          <h2 className="login--title">Hello Friend!~</h2>
+          <p className="login--content my-3">Enter your personal details and tally up your work!</p>
+          <Button className="sign-in--btn py-2 px-5 my-3" onClick={() => props.toggleLogin(!props.hasAccount)}>Sign Up</Button>
         </Col>
       </Row>
     </div>

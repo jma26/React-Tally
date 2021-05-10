@@ -19,7 +19,7 @@ class UserForm extends Component {
 
   render() {
     return (
-      <div class="form">
+      <div className="form">
         <FormContainer
           hasAccount={this.state.hasAccount}
           toggleLogin={this.toggleLogin}
